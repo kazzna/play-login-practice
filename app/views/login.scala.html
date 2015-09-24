@@ -1,0 +1,21 @@
+@(msg: String = "")
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+</head>
+<body>
+  @if(msg.length != 0) {
+  <div class="err-msg">@msg</div>
+  }
+  <form method="post" action="/login">
+    <label for="user-id">User ID:</label>
+    <input name="user-id" type="text" />
+    <label for="password">Password:</label>
+    <input name="password" type="password" />
+    <input type="submit" value="Log in" />
+  </form>
+</body>
+</html>
